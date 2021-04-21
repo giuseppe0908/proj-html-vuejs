@@ -1,0 +1,26 @@
+nav{
+  height: 100px;
+  @include my-flex-space-around;
+  & .nav-bar-list{
+    // display: flex;
+    // justify-content: flex-end;
+    & > ul{
+      display: flex;
+      list-style: none;
+      & li {
+        margin: 0 5px;
+        & > a{
+          color: black;
+          text-decoration: none;
+          &:last-child{
+            margin-right: 10px;
+          }
+        }
+        // & > i{
+        //   // margin: 0 -5px;
+        // }
+      }
+    }
+  }
+
+}

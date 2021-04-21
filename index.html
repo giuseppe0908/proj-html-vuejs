@@ -3,9 +3,40 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./assets/css/master.css">
-    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <title>one-instructor</title>
   </head>
   <body>
 
+    <div id="root">
+      <header>
+          <nav class="container">
+            <div class="logo">
+              <img src="./assets/images/MasterStudy-1.svg" alt="logo">
+            </div>
+            <div class="nav-bar-list">
+              <ul>
+                <li v-for="links in link_list"><a href="#">{{ links.name }}</a></li>
+                <li><i class="fab fa-invision"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="jumbo">
+
+            <div class="text-jumbo">
+              <h1 class="mg-bottom">Start your Human <span class="color-yellow">Revolution</span> today</h1>
+              <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+            </div>
+
+          </div>
+      </header>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./assets/main.js" charset="utf-8"></script>
   </body>
 </html>

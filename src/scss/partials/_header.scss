@@ -1,0 +1,25 @@
+header .jumbo{
+  // background-image: url(../../assets/images/slide-1.jpg);
+  background-image: url("../images/slide-1.jpg");
+  height: 853px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  // background-position: cover;
+  & .text-jumbo{
+    position: absolute;
+    top: 220px;
+    right: 300px;
+    width: 486px;
+    & h1{
+      font-size: 55px;
+      & span.color-yellow{
+        color: $color-div-jumbo;
+      }
+    }
+    & p{
+      color: #bcbcbc;
+      font-size: 16px;
+    }
+  }
+}

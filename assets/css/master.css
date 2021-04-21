@@ -1,3 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: yellow;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mag-top {
+  margin-bottom: 20px;
+}
+
+.mg-bottom {
+  margin-bottom: 20px;
+}
+
+header .jumbo {
+  background-image: url("../images/slide-1.jpg");
+  height: 853px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+header .jumbo .text-jumbo {
+  position: absolute;
+  top: 220px;
+  right: 300px;
+  width: 486px;
+}
+header .jumbo .text-jumbo h1 {
+  font-size: 55px;
+}
+header .jumbo .text-jumbo h1 span.color-yellow {
+  color: #f2b71d;
+}
+header .jumbo .text-jumbo p {
+  color: #bcbcbc;
+  font-size: 16px;
+}
+
+nav {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav .nav-bar-list > ul {
+  display: flex;
+  list-style: none;
+}
+nav .nav-bar-list > ul li {
+  margin: 0 5px;
+}
+nav .nav-bar-list > ul li > a {
+  color: black;
+  text-decoration: none;
+}
+nav .nav-bar-list > ul li > a:last-child {
+  margin-right: 10px;
 }
