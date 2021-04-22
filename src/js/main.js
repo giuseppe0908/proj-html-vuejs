@@ -11,6 +11,7 @@ var app = new Vue({
       },
       {
         name: "Add Course",
+        name_1:"New",
       },
       {
         name: "Pages",

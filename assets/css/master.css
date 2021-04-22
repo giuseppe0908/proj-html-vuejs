@@ -9,24 +9,37 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 }
 
-.mag-top {
-  margin-bottom: 20px;
+.mg-top {
+  margin-top: 40px;
 }
 
 .mg-bottom {
   margin-bottom: 20px;
 }
 
+.pd-top {
+  padding-top: 40px;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.txt-center {
+  text-align: center;
+}
+
 header .jumbo {
   background-image: url("../images/slide-1.jpg");
-  height: 853px;
+  height: 600px;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  background-size: cover;
 }
 header .jumbo .text-jumbo {
   position: absolute;
@@ -43,6 +56,70 @@ header .jumbo .text-jumbo h1 span.color-yellow {
 header .jumbo .text-jumbo p {
   color: #bcbcbc;
   font-size: 16px;
+}
+header .jumbo .banner {
+  height: 180px;
+  width: 70%;
+  padding: 0px 60px;
+  background-color: #f2b71d;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -70px;
+}
+header .jumbo .banner h2 .color-white {
+  color: white;
+}
+header .jumbo .banner input {
+  height: 50px;
+  border-radius: 50px;
+  width: 430px;
+  padding-left: 20px;
+}
+header .jumbo .banner button {
+  border-radius: 50px;
+  height: 50px;
+  width: 100px;
+  padding-left: -30px;
+  margin-left: -105px;
+  background-color: #2d4649;
+  color: white;
+}
+header .jumbo .banner .coundown {
+  display: flex;
+  position: absolute;
+  top: 25px;
+  right: 40px;
+}
+header .jumbo .banner .coundown .days, header .jumbo .banner .coundown .hours, header .jumbo .banner .coundown .minutes, header .jumbo .banner .coundown .seconds {
+  display: flex;
+  margin: 20px 20px;
+  flex-direction: column;
+}
+header .jumbo .banner .coundown .number {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+header .founder {
+  margin-top: 180px;
+  display: flex;
+}
+header .founder .title {
+  margin-left: 30px;
+}
+header .founder .title h2 {
+  width: 66%;
+}
+header .founder .title img {
+  margin-left: 91px;
+  width: 150px;
+}
+header .founder .biography {
+  margin-right: 30px;
+}
+header .founder .biography p {
+  color: #bcbcbc;
 }
 
 nav {
@@ -64,4 +141,92 @@ nav .nav-bar-list > ul li > a {
 }
 nav .nav-bar-list > ul li > a:last-child {
   margin-right: 10px;
+}
+
+main {
+  margin-top: 80px;
+  background-color: #EDF2F5;
+}
+main .contenitore {
+  display: flex;
+}
+main .contenitore .card {
+  margin: 20px 10px;
+  width: calc(100%/3 - 10px);
+}
+main .contenitore .card .card-image-1 {
+  background-image: url("../images/dj.jpeg");
+}
+main .contenitore .card .card-image-2 {
+  background-image: url("../images/unreal.png");
+  background-size: cover;
+  background-position: center;
+}
+main .contenitore .card .card-image-3 {
+  background-image: url("../images/piedi.jpeg");
+}
+main .contenitore .card .card-image-4 {
+  background-image: url("../images/scrivania.jpeg");
+}
+main .contenitore .card .card-image-5 {
+  background-image: url("../images/book.jpg");
+}
+main .contenitore .card .card-image-6 {
+  background-image: url("../images/bike.jpeg");
+}
+main .contenitore .card .card-image {
+  height: 200px;
+  position: relative;
+}
+main .contenitore .card .card-image > p.display-none {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: white;
+  display: none;
+}
+main .contenitore .card .card-image > span.position {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #f2b71d;
+  height: 20px;
+  color: white;
+  padding: 0 5px;
+  font-size: 12px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+main .contenitore .card .card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 18px;
+  background-color: white;
+}
+main .contenitore .card .card-text p {
+  font-size: 12px;
+  color: #bcbcbc;
+}
+main .contenitore .card .card-text .level {
+  border-top: 1px solid #bcbcbc;
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+}
+main .contenitore .card .card-text .level span {
+  padding: 12px;
+  font-size: 11px;
+}
+main .contenitore .card .card-text .level span > i {
+  color: #f2b71d;
+}
+main .contenitore .card, main .contenitore .card .card-image:hover p {
+  display: block;
+}
+main .contenitore .card:hover {
+  opacity: 0.7;
 }
