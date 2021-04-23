@@ -36,9 +36,11 @@ main {
           top: 50%;
           left: 50%;
           transform: translate(-50% , -50%);
-          font-size: 20px;
+          font-size: 25px;
+          line-height: 40px;
           color: white;
           display: none;
+
         }
 
         & > span.position{
@@ -85,9 +87,44 @@ main {
       &, .card-image:hover p{
         display: block;
       }
-      &:hover{
-        opacity: 0.7;
+      &, .card-image:hover{
+        // opacity: 0.7;
         // box-shadow: #fff;
+        // background: rgba(26, 188, 156, 0.9);
+        background-color: rgba(51, 51, 51, 0.8);
+      }
+    }
+
+    // #btn{
+    //   height: 30px;
+    //   width: 50px;
+    //   background-color: $color-div-jumbo;
+    //   border: 1px solid $color-div-jumbo;
+    //   border-radius: 30px;
+    // }
+  }
+  .bottone{
+    display: flex;
+    justify-content:center;
+    padding-bottom: 50px;
+
+  & button{
+    background-color: $color-div-jumbo;
+    border: 1px solid $color-div-jumbo;
+    border-radius: 30px;
+    padding: 10px 15px;
+    color: white;
+  }
+  }
+  & .jumbo-2{
+    background-image: url("../images/jumbo-2.jpg");
+    height: 400px;
+     .img{
+      display: flex;
+      justify-content: flex-end;
+      img{
+        height: 362px;
+        margin-top: 38px;
       }
     }
   }

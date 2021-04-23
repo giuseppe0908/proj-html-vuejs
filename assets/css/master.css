@@ -51,7 +51,7 @@ header .jumbo .text-jumbo h1 {
   font-size: 55px;
 }
 header .jumbo .text-jumbo h1 span.color-yellow {
-  color: #f2b71d;
+  color: #f21d4b;
 }
 header .jumbo .text-jumbo p {
   color: #bcbcbc;
@@ -61,7 +61,7 @@ header .jumbo .banner {
   height: 180px;
   width: 70%;
   padding: 0px 60px;
-  background-color: #f2b71d;
+  background-color: #f21d4b;
   border-radius: 10px;
   position: absolute;
   bottom: -70px;
@@ -183,7 +183,8 @@ main .contenitore .card .card-image > p.display-none {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 20px;
+  font-size: 25px;
+  line-height: 40px;
   color: white;
   display: none;
 }
@@ -222,11 +223,35 @@ main .contenitore .card .card-text .level span {
   font-size: 11px;
 }
 main .contenitore .card .card-text .level span > i {
-  color: #f2b71d;
+  color: #f21d4b;
 }
 main .contenitore .card, main .contenitore .card .card-image:hover p {
   display: block;
 }
-main .contenitore .card:hover {
-  opacity: 0.7;
+main .contenitore .card, main .contenitore .card .card-image:hover {
+  background-color: rgba(51, 51, 51, 0.8);
+}
+main .bottone {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+main .bottone button {
+  background-color: #f21d4b;
+  border: 1px solid #f21d4b;
+  border-radius: 30px;
+  padding: 10px 15px;
+  color: white;
+}
+main .jumbo-2 {
+  background-image: url("../images/jumbo-2.jpg");
+  height: 400px;
+}
+main .jumbo-2 .img {
+  display: flex;
+  justify-content: flex-end;
+}
+main .jumbo-2 .img img {
+  height: 362px;
+  margin-top: 38px;
 }
