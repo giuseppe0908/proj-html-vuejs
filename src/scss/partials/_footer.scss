@@ -1,0 +1,31 @@
+footer{
+ background-color: $color-div-jumbo;
+ margin-top: 50px;
+
+ .container{
+   display: flex;
+ }
+ .about{
+   width: 25%;
+   ul{
+     list-style: none;
+     li{
+       margin-right: 10px;
+       margin-top: 10px;
+     }
+    .icone{
+       display: flex;
+     }
+   }
+ }
+ .contact{
+   width: 25%;
+   ul{
+     list-style: none;
+     li{
+       margin-right: 10px;
+       margin-top: 10px;
+     }
+    }
+  }  
+}

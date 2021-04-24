@@ -16,11 +16,9 @@
             </div>
             <div class="nav-bar-list">
               <ul>
-                <li v-for="links in link_list"><a href="#">{{ links.name }}</a></li>
-                <li><i class="fab fa-invision"></i></li>
-                <li><i class="fab fa-instagram"></i></li>
-                <li><i class="fab fa-facebook"></i></li>
-                <li><i class="fab fa-twitter"></i></li>
+                <li v-for="links in link_list"> <span v-if="(links.new == 1)">NEW</span><a href="#">{{ links.name }}</a></li>
+                <li v-for="item in icons"><i :class=' `${item.icone}`' ></i></li>
+
               </ul>
             </div>
           </nav>
@@ -73,6 +71,7 @@
 
             <div class="card">
               <div class="card-image card-image-1">
+                <div class="oscuro display-none"></div>
                 <span class="position">SPECIAL</span>
                 <p class="display-none">$59</p>
               </div>
@@ -89,6 +88,7 @@
 
             <div class="card">
               <div class="card-image card-image-2">
+                <div class="oscuro display-none"></div>
                 <span class="position">SPECIAL</span>
                 <p class="display-none">$59</p>
               </div>
@@ -105,6 +105,7 @@
 
             <div class="card">
               <div class="card-image card-image-3">
+                <div class="oscuro display-none"></div>
                 <span class="position">SPECIAL</span>
                 <p class="display-none">$59</p>
               </div>
@@ -120,9 +121,10 @@
             </div>
           </div>
 
-          <div class="contenitore mg-bottom">
+          <div class="contenitore">
             <div class="card">
               <div class="card-image card-image-4">
+                <div class="oscuro display-none"></div>
                   <p class="display-none">$59</p>
               </div>
               <div class="card-text">
@@ -138,6 +140,7 @@
 
             <div class="card">
               <div class="card-image card-image-5">
+                <div class="oscuro display-none"></div>
                     <p class="display-none">$59</p>
               </div>
               <div class="card-text">
@@ -153,6 +156,7 @@
 
             <div class="card">
               <div class="card-image card-image-6">
+                  <div class="oscuro display-none"></div>
                   <p class="display-none">$59</p>
               </div>
               <div class="card-text">
@@ -175,7 +179,11 @@
         <section class="jumbo-2">
           <div class="container">
             <div class="jumbo-2-text">
-              <h2></h2>
+              <h2 class="mg-bottom">Get My Exclusive Investing book just fot $19.50</h2>
+              <p class="mg-bottom">Vestibulum imentum eu urna vel cursus. Aenean veichula quam quam, vitae pellentesqua urna elementum cursus.</p>
+              <div class="amazon">
+                <img src="./assets/images/amazon.png" alt="">
+              </div>
             </div>
             <div class="img">
               <img src="./assets/images/book.png" alt="">
@@ -183,7 +191,127 @@
           </div>
         </section>
 
+        <section class="courses">
+          <div class="container">
+          <h1 class="mg-bottom">Why my corses?</h1>
+
+            <div class="raccolta">
+              <div class="card-1 w-50">
+                <!-- <i class="fa-icon-stm_icon_briefcase"></i> -->
+                <i class="fas fa-briefcase"></i>
+                <div class="card-1-text">
+                  <h3 class="mg-bottom">Entrepreneurship</h3>
+                  <p>Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate</p>
+                </div>
+              </div>
+
+              <div class="card-1 w-50">
+                <!-- <i class="fa-icon-stm_icon_briefcase"></i> -->
+                <i class="fas fa-rocket"></i>
+                <div class="card-1-text">
+                  <h3 class="mg-bottom">Entrepreneurship</h3>
+                  <p>Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate</p>
+                </div>
+              </div>
+            </div>
+            <div class="raccolta">
+              <div class="card-1 w-50">
+                <!-- <i class="fa-icon-stm_icon_briefcase"></i> -->
+                <i class="far fa-thumbs-up"></i>
+                <div class="card-1-text">
+                  <h3 class="mg-bottom">Entrepreneurship</h3>
+                  <p>Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate</p>
+                </div>
+              </div>
+
+              <div class="card-1 w-50">
+                <!-- <i class="fa-icon-stm_icon_briefcase"></i> -->
+                <i class="fas fa-cog"></i>
+                <div class="card-1-text">
+                  <h3 class="mg-bottom">Entrepreneurship</h3>
+                  <p>Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="jumbo-3">
+            <div class="icon">
+              <i class="fas fa-user-friends"></i>
+              <div class="column">
+                <span class="number">3195</span>
+                <span>Online Learner</span>
+              </div>
+            </div>
+            <div class="icon">
+              <i class="fas fa-play"></i>
+              <div class="column">
+                <span class="number">23</span>
+                <span>Video Courses</span>
+              </div>
+            </div>
+            <div class="icon">
+              <i class="far fa-image"></i>
+              <div class="column">
+                <span class="number">437</span>
+                <span>Sliders & Images</span>
+              </div>
+            </div>
+            <div class="icon">
+              <i class="far fa-thumbs-up"></i>
+              <div class="column">
+                <span class="number">1440</span>
+                <span>Excellent Reviews</span>
+              </div>
+            </div>
+        </section>
+
+        <section class="students">
+          <div class="container">
+            <h2>What Students Say</h2>
+            <div class="carosel">
+              <div class="arrow-left">
+                <i class="fas fa-arrow-left" @click="prev"></i>
+              </div>
+              <div class="images">
+                <img v-for="(img,index) in img_array" :class="(index == i) ? 'active' : '' " :src="`${img.srcc}`" alt="">
+              </div>
+              <div class="arrow-right">
+                <i class="fas fa-arrow-right" @click="next"></i>
+              </div>
+            </div>
+            <div class="text">
+              <h3 class="mg-bottom" v-for="(title,index) in text" v-if="(index == i)">{{title.h3}}</h3>
+              <div class="star mg-top-20 mg-bottom-40"> <i v-for="star in 5" class="fas fa-star"></i></div>
+              <p v-for="(p,index) in text"  v-if="(index == i)"> {{p.p}}</p>
+            </div>
+          </div>
+
+        </section>
+
       </main>
+      <footer>
+        <div class="container">
+          <div class="about ">
+            <h3 v-for="item in about">{{item.title}}</h3>
+            <ul>
+              <li v-for="item in about"><a href="#">{{item.testo}}</a></li>
+              <div class="icone">
+              <li v-for="icon in about[0].icone">  <i :class='`${icon}`'></i></li>
+              </div>
+            </ul>
+          </div>
+
+          <div class="contact">
+              <h3 v-for="item in contact">{{item.title}}</h3>
+              <ul>
+                <li v-for="item in contact"><a href="#">{{item.testo}}</a></li>
+              </ul>
+          </div>
+
+        </div>
+      </footer>
 
     </div>
 

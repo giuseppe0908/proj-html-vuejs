@@ -9,7 +9,7 @@ header .jumbo{
   background-size: cover;
   & .text-jumbo{
     position: absolute;
-    top: 220px;
+    top: 147px;
     right: 300px;
     width: 486px;
     & h1{
@@ -41,15 +41,17 @@ header .jumbo{
       border-radius: 50px;
       width: 430px;
       padding-left: 20px;
+      border: 0
     }
     & button{
       border-radius: 50px;
       height: 50px;
       width: 100px;
       padding-left: -30px;
-      margin-left: -105px;
+      margin-left: -104px;
       background-color: #2d4649;
       color: white;
+      border: 0;
     }
     & .coundown{
       display: flex;
