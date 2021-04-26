@@ -17,8 +17,8 @@
             <div class="nav-bar-list">
               <ul>
                 <!-- :class="(links.new == 1) ? 'special-new' : '' " -->
-                <li v-for="links in link_list"><div class="special-new" v-if="links.new == 1"><span>NEW</span></div><a href="#">{{ links.name }}</a></li>
-                <li v-for="item in icons"><i :class=' `${item.icone}`' ></i></li>
+                <li v-for="links in link_list"><div class="special-new" v-if="links.new == 1"><span>NEW</span></div><a :href="`${links.link}`">{{ links.name }}</a></li>
+                <li v-for="item in icons"><i :class='item.icone' ></i></li>
               </ul>
             </div>
             <i class="fas fa-bars" @click="cliccato"></i>
@@ -26,7 +26,6 @@
           </nav>
           <div class="nav-md" v-if="(open)">
             <ul>
-
               <li v-for="links in link_list"> <a href="#">{{ links.name }}</a></li>
               <div class="input-search">
                 <input type="text" placeholder="Search...">
@@ -83,7 +82,7 @@
           </div>
       </header>
       <main>
-        <div class="container">
+        <div class="container" id="new-course">
           <h1 class="txt-center mg-bottom pd-top">New Courses</h1>
           <div class="contenitore">
 
@@ -276,6 +275,7 @@
                 <span>Excellent Reviews</span>
               </div>
             </div>
+
         </section>
 
         <section class="students">
@@ -309,7 +309,7 @@
             <ul>
               <li v-for="item in about"><a href="#">{{item.testo}}</a></li>
               <div class="icone">
-              <li v-for="icon in about[0].icone">  <i :class='`${icon}`'></i></li>
+              <li v-for="icon in about[0].icone">  <i :class='icon'></i></li>
               </div>
             </ul>
           </div>
@@ -359,6 +359,13 @@
 
         </div>
       </footer>
+      <div class="design">
+        <i class="fas fa-desktop"></i>
+        <i class="far fa-life-ring"></i>
+        <i class="fas fa-wrench"></i>
+        <i class="fas fa-shopping-cart"></i>
+        <i class="fas fa-mobile-alt"></i>
+      </div>
 
     </div>
 

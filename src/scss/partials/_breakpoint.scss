@@ -93,6 +93,11 @@
   }
 
 }
+@media screen and (min-width: 769px){
+  .nav-md{
+    display: none;
+  }
+}
 
 @media screen and (max-width: 768px){
   nav{
@@ -182,10 +187,13 @@
   }
 }
 @media screen and (max-width: 528px){
-  header .jumbo .text-jumbo {
-    right: -15px;
-    h1 {
-    font-size: 40px;
+  header .jumbo{
+    background-position: inherit;
+    .text-jumbo {
+      right: -15px;
+      h1 {
+      font-size: 40px;
+      }
     }
   }
   header .jumbo .banner .coundown {

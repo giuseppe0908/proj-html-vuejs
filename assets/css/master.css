@@ -50,6 +50,23 @@ a {
   text-decoration: none;
 }
 
+.design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: -24px;
+  z-index: 3;
+}
+.design i {
+  margin: 15px 0px;
+  font-size: 20px;
+}
+
 header .jumbo {
   background-image: url("../images/slide-1.jpg");
   height: 600px;
@@ -630,6 +647,11 @@ footer .blog .column .colorato {
     margin-top: 10px;
   }
 }
+@media screen and (min-width: 769px) {
+  .nav-md {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   nav {
     justify-content: space-between;
@@ -729,6 +751,9 @@ footer .blog .column .colorato {
   }
 }
 @media screen and (max-width: 528px) {
+  header .jumbo {
+    background-position: inherit;
+  }
   header .jumbo .text-jumbo {
     right: -15px;
   }

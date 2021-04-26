@@ -11,22 +11,27 @@ var app = new Vue({
       {
         name: "Courses",
         new: 0,
+        link:"https://www.google.com/",
       },
       {
         name: "Course Formats",
         new: 0,
+        link:"https://stylemixthemes.com/masterstudy/one-instructor/",
       },
       {
         name: "Add Course",
         new: 1,
+        link:"#new-course",
       },
       {
         name: "Pages",
         new: 0,
+        link:"https://stylemixthemes.com/masterstudy/one-instructor/about-us/",
       },
       {
         name: "Demos",
         new: 0,
+        link:"https://stylemixthemes.com/masterstudy/#demos",
       },
 
     ],
