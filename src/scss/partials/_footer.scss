@@ -1,12 +1,16 @@
 footer{
  background-color: $color-div-jumbo;
  margin-top: 50px;
-
  .container{
    display: flex;
  }
+ .footer{
+   width: calc(100%/4 - 10px);
+   margin-top: 50px;
+  margin-right: 10px
+ }
  .about{
-   width: 25%;
+   // width: 25%;
    ul{
      list-style: none;
      li{
@@ -19,13 +23,49 @@ footer{
    }
  }
  .contact{
-   width: 25%;
+   // width: 25%;
    ul{
      list-style: none;
      li{
        margin-right: 10px;
        margin-top: 10px;
+       .no-margin{
+        margin-top: -10px ;
+      }
      }
+
     }
-  }  
+  }
+  .pages{
+      .div{
+        display: flex;
+      }
+    .altra-column{
+      margin-left: 40px;
+    }
+  }
+  .blog{
+    display: flex;
+    flex-direction: column;
+    h3{
+      margin: 0 10px;
+    }
+    .part-1, .part-2{
+      display: flex;
+      margin: 10px
+    }
+    img{
+      height: 80px;
+      width: 80px;
+      // margin: 10px;
+    }
+    .column{
+      display: flex;
+      flex-direction: column;
+      margin:0px 10px;
+      .colorato{
+        color: #bcbcbc;
+      }
+    }
+  }
 }

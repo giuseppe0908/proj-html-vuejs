@@ -16,12 +16,27 @@
             </div>
             <div class="nav-bar-list">
               <ul>
-                <li v-for="links in link_list"> <span v-if="(links.new == 1)">NEW</span><a href="#">{{ links.name }}</a></li>
+                <!-- :class="(links.new == 1) ? 'special-new' : '' " -->
+                <li v-for="links in link_list"><div class="special-new" v-if="links.new == 1"><span>NEW</span></div><a href="#">{{ links.name }}</a></li>
                 <li v-for="item in icons"><i :class=' `${item.icone}`' ></i></li>
-
               </ul>
             </div>
+            <i class="fas fa-bars" @click="cliccato"></i>
+
           </nav>
+          <div class="nav-md" v-if="(open)">
+            <ul>
+
+              <li v-for="links in link_list"> <a href="#">{{ links.name }}</a></li>
+              <div class="input-search">
+                <input type="text" placeholder="Search...">
+                <button class="search" type="button" name="button">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+
+            </ul>
+          </div>
 
           <div class="jumbo">
            <div class="container">
@@ -30,9 +45,12 @@
               <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
             </div>
             <div class="banner mg-bottom">
-              <h2 class="mg-top mg-bottom"><span class="color-white">Limited Sale:</span> All courses with 55% off</h2>
-              <input  type="text" placeholder="Enter your E-mail" >
-              <button type="button" >SUBSCRIBE</button>
+              <h2 class="mg-bottom"><span class="color-white">Limited Sale:</span> All courses with 55% off</h2>
+              <div class="input-button">
+                <input  type="text" placeholder="Enter your E-mail" >
+                <button type="button" >SUBSCRIBE</button>
+              </div>
+
               <div class="coundown">
                 <div class="days">
                   <p class="number">26</p>
@@ -79,7 +97,7 @@
                 <h3 class="txt-center mg-bottom" >How to be a DJ? Make Electronic Music</h3>
                 <p class="mg-bottom">Electronic</p>
                 <div class="level">
-                  <span><i class="fas fa-signal"></i> Intermediate</span>
+                  <span><i class="fas fa-signal"></i> Advanced</span>
                   <span><i class="fas fa-list"></i> 8 Lectures</span>
                   <span><i class="far fa-clock"></i> 6 hours</span>
                 </div>
@@ -90,13 +108,13 @@
               <div class="card-image card-image-2">
                 <div class="oscuro display-none"></div>
                 <span class="position">SPECIAL</span>
-                <p class="display-none">$59</p>
+                <p class="display-none">$78</p>
               </div>
               <div class="card-text">
-                <h3 class="txt-center mg-bottom" >How to be a DJ? Make Electronic Music</h3>
-                <p class="mg-bottom">Electronic</p>
+                <h3 class="txt-center mg-bottom" >Nvidia and UE4 Technologies Practice</h3>
+                <p class="mg-bottom">Nvidia</p>
                 <div class="level">
-                  <span><i class="fas fa-signal"></i> Intermediate</span>
+                  <span><i class="fas fa-signal"></i> Advanced</span>
                   <span><i class="fas fa-list"></i> 8 Lectures</span>
                   <span><i class="far fa-clock"></i> 6 hours</span>
                 </div>
@@ -107,32 +125,30 @@
               <div class="card-image card-image-3">
                 <div class="oscuro display-none"></div>
                 <span class="position">SPECIAL</span>
-                <p class="display-none">$59</p>
+                <p class="display-none">$50</p>
               </div>
               <div class="card-text">
-                <h3 class="txt-center mg-bottom" >How to be a DJ? Make Electronic Music</h3>
-                <p class="mg-bottom">Electronic</p>
+                <h3 class="txt-center mg-bottom" >Fashion Photography from professional</h3>
+                <p class="mg-bottom">Fashion</p>
                 <div class="level">
-                  <span><i class="fas fa-signal"></i> Intermediate</span>
-                  <span><i class="fas fa-list"></i> 8 Lectures</span>
+                  <span><i class="fas fa-signal"></i> Advanced</span>
+                  <span><i class="fas fa-list"></i> 6 Lectures</span>
                   <span><i class="far fa-clock"></i> 6 hours</span>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="contenitore">
             <div class="card">
               <div class="card-image card-image-4">
                 <div class="oscuro display-none"></div>
-                  <p class="display-none">$59</p>
+                  <p class="display-none">$90</p>
               </div>
               <div class="card-text">
-                <h3 class="txt-center mg-bottom" >How to be a DJ? Make Electronic Music</h3>
-                <p class="mg-bottom">Electronic</p>
+                <h3 class="txt-center mg-bottom" >Design Instruments for Communication</h3>
+                <p class="mg-bottom">Communication</p>
                 <div class="level">
                   <span><i class="fas fa-signal"></i> Intermediate</span>
-                  <span><i class="fas fa-list"></i> 8 Lectures</span>
+                  <span><i class="fas fa-list"></i> 6 Lectures</span>
                   <span><i class="far fa-clock"></i> 6 hours</span>
                 </div>
               </div>
@@ -141,14 +157,14 @@
             <div class="card">
               <div class="card-image card-image-5">
                 <div class="oscuro display-none"></div>
-                    <p class="display-none">$59</p>
+                    <p class="display-none">$70</p>
               </div>
               <div class="card-text">
-                <h3 class="txt-center mg-bottom" >How to be a DJ? Make Electronic Music</h3>
-                <p class="mg-bottom">Electronic</p>
+                <h3 class="txt-center mg-bottom" >Make your Concept Right and Beautiful</h3>
+                <p class="mg-bottom">Art</p>
                 <div class="level">
                   <span><i class="fas fa-signal"></i> Intermediate</span>
-                  <span><i class="fas fa-list"></i> 8 Lectures</span>
+                  <span><i class="fas fa-list"></i> 6 Lectures</span>
                   <span><i class="far fa-clock"></i> 6 hours</span>
                 </div>
               </div>
@@ -157,14 +173,14 @@
             <div class="card">
               <div class="card-image card-image-6">
                   <div class="oscuro display-none"></div>
-                  <p class="display-none">$59</p>
+                  <p class="display-none">$20</p>
               </div>
               <div class="card-text">
-                <h3 class="txt-center mg-bottom" >How to be a DJ? Make Electronic Music</h3>
-                <p class="mg-bottom">Electronic</p>
+                <h3 class="txt-center mg-bottom" >Road Bike Manual or How to Be a Champion.</h3>
+                <p class="mg-bottom">Bicycling</p>
                 <div class="level">
                   <span><i class="fas fa-signal"></i> Intermediate</span>
-                  <span><i class="fas fa-list"></i> 8 Lectures</span>
+                  <span><i class="fas fa-list"></i> 6 Lectures</span>
                   <span><i class="far fa-clock"></i> 6 hours</span>
                 </div>
               </div>
@@ -197,7 +213,6 @@
 
             <div class="raccolta">
               <div class="card-1 w-50">
-                <!-- <i class="fa-icon-stm_icon_briefcase"></i> -->
                 <i class="fas fa-briefcase"></i>
                 <div class="card-1-text">
                   <h3 class="mg-bottom">Entrepreneurship</h3>
@@ -206,17 +221,14 @@
               </div>
 
               <div class="card-1 w-50">
-                <!-- <i class="fa-icon-stm_icon_briefcase"></i> -->
                 <i class="fas fa-rocket"></i>
                 <div class="card-1-text">
                   <h3 class="mg-bottom">Entrepreneurship</h3>
                   <p>Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate</p>
                 </div>
               </div>
-            </div>
-            <div class="raccolta">
+
               <div class="card-1 w-50">
-                <!-- <i class="fa-icon-stm_icon_briefcase"></i> -->
                 <i class="far fa-thumbs-up"></i>
                 <div class="card-1-text">
                   <h3 class="mg-bottom">Entrepreneurship</h3>
@@ -225,7 +237,6 @@
               </div>
 
               <div class="card-1 w-50">
-                <!-- <i class="fa-icon-stm_icon_briefcase"></i> -->
                 <i class="fas fa-cog"></i>
                 <div class="card-1-text">
                   <h3 class="mg-bottom">Entrepreneurship</h3>
@@ -293,7 +304,7 @@
       </main>
       <footer>
         <div class="container">
-          <div class="about ">
+          <div class="about footer">
             <h3 v-for="item in about">{{item.title}}</h3>
             <ul>
               <li v-for="item in about"><a href="#">{{item.testo}}</a></li>
@@ -303,11 +314,47 @@
             </ul>
           </div>
 
-          <div class="contact">
-              <h3 v-for="item in contact">{{item.title}}</h3>
+          <div class="contact footer">
+              <h3 v-if="(item.title)" v-for="item in contact">{{item.title}}</h3>
               <ul>
-                <li v-for="item in contact"><a href="#">{{item.testo}}</a></li>
+                <li v-for="item in contact" :class="(item.no_margin) ? 'no-margin' : '' "><a href="#">{{item.testo}}</a></li>
               </ul>
+          </div>
+
+          <div class="pages footer">
+              <h3 v-for="item in pages">{{item.title}}</h3>
+              <div class="div mg-top">
+                <ul>
+                  <li v-for="item in pages[0].text_1" ><a href="#">{{item}}</a></li>
+                </ul>
+                <div class="altra-column">
+                  <ul>
+                    <li v-for="item in pages[0].text_2"><a href="#">{{item}}</a></li>
+                  </ul>
+                </div>
+              </div>
+
+          </div>
+
+          <div class="blog footer">
+            <h3 v-for="item in part_1">{{item.title}}</h3>
+
+            <div class="part-1">
+              <img v-for="img in part_1" :src="`${img.src}`" alt="">
+              <div class="column">
+                <p v-for="testo in part_1">{{testo.text_1}}</p>
+                <p class="colorato" v-for="testo in part_1">{{testo.text_2}}</p>
+              </div>
+            </div>
+
+            <div class="part-2">
+              <img v-for="img in part_2" :src="`${img.src}`" alt="">
+              <div class="column">
+                <p v-for="testo in part_2">{{testo.text_1}}</p>
+                <p class="colorato" v-for="testo in part_2">{{testo.text_2}}</p>
+
+              </div>
+            </div>
           </div>
 
         </div>

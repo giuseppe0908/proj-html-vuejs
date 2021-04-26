@@ -3,17 +3,17 @@ main {
   background-color: #EDF2F5;
   & .contenitore{
     display: flex;
-
+    flex-wrap: wrap;
     & .card{
       margin: 20px 10px;
-      width: calc(100%/3 - 10px);
-      .display-none{
-        display: none;
-      }
+      width: calc(100%/3 - 20px);
       &:hover .oscuro{
         display: block;
         box-shadow: 0 5px 15px rgb(51 51 51 / 20%);
         cursor: pointer;
+      }
+      &:hover .card-text{
+        box-shadow: 0 5px 15px rgb(51 51 51 / 20%);
       }
       &:hover p{
         display: block;
@@ -50,10 +50,7 @@ main {
         }
 
         & > p.display-none{
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50% , -50%);
+          @include post-absolute-centarto;
           font-size: 25px;
           line-height: 40px;
           color: white;
@@ -72,9 +69,7 @@ main {
           display: flex;
           align-items: center;
         }
-
       }
-
       .card-text{
         @include my-flex-center-column;
         padding: 20px 18px;
@@ -86,7 +81,7 @@ main {
         }
         & p{
           font-size: 12px;
-          color: #bcbcbc;
+          color: $color-gray;
         }
         & .level{
           border-top: 1px solid #bcbcbc;
@@ -108,13 +103,15 @@ main {
     display: flex;
     justify-content:center;
     padding-bottom: 50px;
+    margin-top: 30px;
 
     & button{
       background-color: $color-div-jumbo;
       border: 1px solid $color-div-jumbo;
       border-radius: 30px;
-      padding: 10px 15px;
+      padding: 12px 20px;
       color: white;
+      font-size: 15px;
       &:hover{
         background-color: $color-div-jumbo;
         opacity: 0.7;
@@ -170,7 +167,7 @@ main {
     }
     .raccolta{
       display: flex;
-
+      flex-wrap: wrap;
       .card-1{
         background-color: white;
         margin: 20px 20px;
@@ -188,7 +185,7 @@ main {
           }
         }
         &.w-50{
-          width: calc(100%/2 - 20px);
+          width: calc(100%/2 - 40px);
         }
         & > i{
           position: absolute;
@@ -206,7 +203,7 @@ main {
           margin-right: 30px;
           margin-bottom: 50px;
           & p{
-            color: #bcbcbc;
+            color: $color-gray;
           }
         }
 
@@ -221,10 +218,7 @@ main {
     display: flex;
     justify-content: center;
     & .icon{
-      display: flex;
-      // flex-direction: row;
-      align-items: center;
-      justify-content: center;
+      @include my-flex-centrato;
       margin: 0 30px;
       & i{
         font-size: 50px;
@@ -275,10 +269,7 @@ main {
       }
     }
     .text{
-      display: flex;
-      // justify-content: center;
-      flex-direction: column;
-      align-items: center;
+      @include my-flex-center-column;
       h3{
         font-family: "Roboto Slab";
         font-size: 22px;
@@ -290,7 +281,7 @@ main {
       }
       p{
         text-align: center;
-        color: #bcbcbc;
+        color: $color-gray;
         font-family: "Open Sans";
         font-size: 18px;
         line-height: 28px;

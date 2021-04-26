@@ -41,6 +41,10 @@ body {
   text-align: center;
 }
 
+.display-none {
+  display: none;
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -78,6 +82,9 @@ header .jumbo .banner {
   border-radius: 10px;
   position: absolute;
   bottom: -70px;
+}
+header .jumbo .banner h2 {
+  margin-top: 30px;
 }
 header .jumbo .banner h2 .color-white {
   color: white;
@@ -142,7 +149,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: relative;
 }
 nav .nav-bar-list > ul {
   display: flex;
@@ -153,13 +159,16 @@ nav .nav-bar-list > ul li {
 }
 nav .nav-bar-list > ul li span {
   position: absolute;
-  top: 23px;
-  right: 290px;
+  top: -15px;
+  right: 0;
   background: red;
   border-radius: 5px;
   font-size: 10px;
-  padding: 1px 5px;
+  padding: 2px 5px;
   color: white;
+}
+nav .nav-bar-list > ul li .special-new {
+  position: relative;
 }
 nav .nav-bar-list > ul li > a {
   color: black;
@@ -168,6 +177,9 @@ nav .nav-bar-list > ul li > a {
 nav .nav-bar-list > ul li > a:last-child {
   margin-right: 10px;
 }
+nav i.fa-bars {
+  display: none;
+}
 
 main {
   margin-top: 80px;
@@ -175,18 +187,19 @@ main {
 }
 main .contenitore {
   display: flex;
+  flex-wrap: wrap;
 }
 main .contenitore .card {
   margin: 20px 10px;
-  width: calc(100%/3 - 10px);
-}
-main .contenitore .card .display-none {
-  display: none;
+  width: calc(100%/3 - 20px);
 }
 main .contenitore .card:hover .oscuro {
   display: block;
   box-shadow: 0 5px 15px rgba(51, 51, 51, 0.2);
   cursor: pointer;
+}
+main .contenitore .card:hover .card-text {
+  box-shadow: 0 5px 15px rgba(51, 51, 51, 0.2);
 }
 main .contenitore .card:hover p {
   display: block;
@@ -275,13 +288,15 @@ main .bottone {
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
+  margin-top: 30px;
 }
 main .bottone button {
   background-color: #f21d4b;
   border: 1px solid #f21d4b;
   border-radius: 30px;
-  padding: 10px 15px;
+  padding: 12px 20px;
   color: white;
+  font-size: 15px;
 }
 main .bottone button:hover {
   background-color: #f21d4b;
@@ -332,6 +347,7 @@ main .courses h1 {
 }
 main .courses .raccolta {
   display: flex;
+  flex-wrap: wrap;
 }
 main .courses .raccolta .card-1 {
   background-color: white;
@@ -351,7 +367,7 @@ main .courses .raccolta .card-1:hover .card-1-text p {
   color: black;
 }
 main .courses .raccolta .card-1.w-50 {
-  width: calc(100%/2 - 20px);
+  width: calc(100%/2 - 40px);
 }
 main .courses .raccolta .card-1 > i {
   position: absolute;
@@ -459,8 +475,10 @@ footer {
 footer .container {
   display: flex;
 }
-footer .about {
-  width: 25%;
+footer .footer {
+  width: calc(100%/4 - 10px);
+  margin-top: 50px;
+  margin-right: 10px;
 }
 footer .about ul {
   list-style: none;
@@ -472,13 +490,267 @@ footer .about ul li {
 footer .about ul .icone {
   display: flex;
 }
-footer .contact {
-  width: 25%;
-}
 footer .contact ul {
   list-style: none;
 }
 footer .contact ul li {
   margin-right: 10px;
   margin-top: 10px;
+}
+footer .contact ul li .no-margin {
+  margin-top: -10px;
+}
+footer .pages .div {
+  display: flex;
+}
+footer .pages .altra-column {
+  margin-left: 40px;
+}
+footer .blog {
+  display: flex;
+  flex-direction: column;
+}
+footer .blog h3 {
+  margin: 0 10px;
+}
+footer .blog .part-1, footer .blog .part-2 {
+  display: flex;
+  margin: 10px;
+}
+footer .blog img {
+  height: 80px;
+  width: 80px;
+}
+footer .blog .column {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px;
+}
+footer .blog .column .colorato {
+  color: #bcbcbc;
+}
+
+@media screen and (max-width: 1300px) {
+  .container {
+    width: 80%;
+  }
+
+  header .jumbo .banner {
+    width: 80%;
+  }
+
+  main .students .carosel .arrow-left, main .students .carosel .arrow-right {
+    margin: 0 15px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  header .jumbo .banner .coundown {
+    right: 0;
+    top: 34px;
+  }
+  header .jumbo .banner .coundown .number {
+    font-size: 30px;
+  }
+
+  header .jumbo .text-jumbo {
+    right: 160px;
+  }
+
+  header .jumbo .banner input {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
+
+  header .jumbo .banner {
+    width: 100%;
+  }
+
+  header .jumbo .banner .coundown {
+    right: 10px;
+    top: 34px;
+  }
+  header .jumbo .banner .coundown .number {
+    font-size: 40px;
+  }
+
+  header .jumbo .banner input {
+    width: 400px;
+  }
+
+  main .students .carosel .arrow-left, main .students .carosel .arrow-right {
+    margin: 0px 0px;
+  }
+
+  main .students .carosel .images img {
+    width: 60px;
+  }
+  main .students .carosel .images img.active {
+    width: 90px;
+  }
+
+  footer .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  footer .footer {
+    width: calc(100%/2 - 30px);
+    margin-left: 15px;
+  }
+
+  footer .blog img {
+    height: 70px;
+    width: 70px;
+  }
+}
+@media screen and (max-width: 820px) {
+  header .jumbo .text-jumbo {
+    right: 10px;
+  }
+
+  header .jumbo .banner {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .jumbo .banner .coundown {
+    position: static;
+  }
+  header .jumbo .banner .coundown .days, header .jumbo .banner .coundown .hours, header .jumbo .banner .coundown .minutes, header .jumbo .banner .coundown .seconds {
+    margin: 10px 10px;
+  }
+  header .jumbo .banner .coundown .number {
+    font-size: 35px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+  }
+  nav .logo, nav .fa-bars {
+    margin: 18px;
+  }
+  nav .fa-bars {
+    font-size: 20px;
+    color: #f21d4b;
+  }
+
+  nav .nav-bar-list > ul {
+    display: none;
+  }
+
+  nav i.fa-bars {
+    display: block;
+  }
+
+  .nav-md {
+    width: 95%;
+    margin: 0 auto;
+    background-color: #EFF2F5;
+    margin-bottom: 20px;
+  }
+  .nav-md ul {
+    border-top: 3px solid #e5e5e5;
+  }
+  .nav-md ul li {
+    border-bottom: 1px solid lightgray;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 25px;
+  }
+  .nav-md .input-search {
+    display: flex;
+  }
+  .nav-md .input-search input {
+    height: 40px;
+    border: 0;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    padding-left: 25px;
+    font-size: 15px;
+  }
+  .nav-md .input-search .search {
+    width: 50px;
+    background-color: #f21d4b;
+    border: 0;
+  }
+  .nav-md .input-search .search i {
+    font-size: 15px;
+  }
+
+  header .jumbo .banner {
+    height: 250px;
+  }
+
+  main .contenitore .card {
+    margin: 20px 20px;
+    width: calc(100%/2 - 40px);
+  }
+
+  main .courses .raccolta .card-1.w-50 {
+    width: calc(100%/1 - 40px);
+  }
+
+  main .jumbo-3 {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .jumbo-3 .icon {
+    margin: 20px;
+    flex-direction: column;
+  }
+  main .jumbo-3 .icon .column {
+    align-items: center;
+  }
+  main .jumbo-3 .icon i {
+    margin: 0 0;
+  }
+
+  main .students > .container {
+    width: 100%;
+  }
+
+  main .students .carosel .images img {
+    width: 80px;
+  }
+  main .students .carosel .images img.active {
+    width: 110px;
+  }
+}
+@media screen and (max-width: 528px) {
+  header .jumbo .text-jumbo {
+    right: -15px;
+  }
+  header .jumbo .text-jumbo h1 {
+    font-size: 40px;
+  }
+
+  header .jumbo .banner .coundown {
+    display: none;
+  }
+
+  header .jumbo .banner button {
+    margin-left: 0px;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  main .contenitore .card {
+    width: calc(100%/1 - 40px);
+  }
+
+  footer .footer {
+    width: calc(100%/1 - 30px);
+  }
 }

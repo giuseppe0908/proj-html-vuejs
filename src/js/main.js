@@ -4,7 +4,9 @@ var app = new Vue({
   data: {
     id: '',
     i: 0,
+    open: false,
 
+//--NAV-BAR
     link_list: [
       {
         name: "Courses",
@@ -46,7 +48,7 @@ var app = new Vue({
         icone: "fab fa-twitter",
       },
     ],
-
+//-- ARRAY DI IMG PER CAROSEL
   img_array:[
     {
       srcc: "./assets/images/primo.jpg",
@@ -58,6 +60,7 @@ var app = new Vue({
       srcc:   "./assets/images/terza.jpg",
     }
   ],
+  //-- TESTO DEI SUDENTI CAROSEL
   text:[
     {
       h3:" Come as you are",
@@ -72,6 +75,7 @@ var app = new Vue({
       p: "It is no exaggeration to say this MasterStudy experience was transformative–both professionally and personally. This workshop will long remain a high point of my life. Thanks again…. I am feeling energized and eager to start teaching my class next week. I can’t wait to use all of my new teaching tools. I will absolutely recommend this workshop to other educators!",
     },
   ],
+  //--FOOTER LIST
   about:[
     {
       title:"ABOUT",
@@ -86,23 +90,59 @@ var app = new Vue({
   contact:[
     {
       title:"CONTACT",
+      no_margin: false,
     },
     {
       testo:"USA, Callifornia 20, First Avenue, Callifornia",
+      no_margin: false,
     },
     {
       testo:"Tel.: +1 212 458 300 32",
+      no_margin: true,
     },
     {
       testo:"Fax: +1 212 375 24 14",
+      no_margin: true,
     },
     {
       testo:"info@masterstudy.com",
+      no_margin: false,
     },
   ],
 
-},
+  pages:[
+    {
+      title:"PAGES",
+      text_1:[
+        "Blog",
+        "Home",
+        "Shortcodes",
+      ],
+      text_2:[
+        "Courses",
+        "Membership A...",
+        "Typography",
+      ],
+    }
+  ],
 
+      part_1:[
+      {
+        title:"BLOG",
+        src:"./assets/images/photo.jpeg",
+        text_1:"Our main target is to “Developing Yourself as a Leader",
+        text_2:"- August 9, 2018",
+      },
+      ],
+      part_2:[
+      {
+        src:"./assets/images/photo-2.jpeg",
+        text_1:"Those Other College Expenses You Aren`t Thinking About",
+        text_2:"-  June 3, 2015",
+      },
+      ],
+},
+//-- METHODS FUNZIONAMENTO CACROSEL
   methods:{
       next: function(e) {
         if (e && e.type == "click") {
@@ -131,13 +171,15 @@ var app = new Vue({
         clearInterval(this.id);
         this.id = "";
       }
+      },
+
+      cliccato: function(){
+        this.open = !this.open;
       }
-
-
   },
   created: function () {
    this.id = setInterval(() => {
      this.next();
-   }, 2000 );
+   }, 3000 );
   },
 });
